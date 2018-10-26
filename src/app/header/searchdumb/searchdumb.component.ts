@@ -1,4 +1,6 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Movies } from './../../movie';
+import { Router } from '@angular/router';
+import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-searchdumb',
@@ -7,7 +9,7 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 })
 export class SearchdumbComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -15,5 +17,7 @@ export class SearchdumbComponent implements OnInit {
   @Output() sendToParent =new EventEmitter<string>();
   search(){
     this.sendToParent.emit(this.searchbox);
+    // this.router.navigate(['cards'],{})
   }
+  @Input() movies:Movies;
 }

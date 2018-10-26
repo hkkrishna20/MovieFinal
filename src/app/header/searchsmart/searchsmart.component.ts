@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Results } from './../../movie';
 import { SearchdataService } from './../searchdata.service';
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
@@ -16,7 +17,7 @@ public movies : Movies={
   total_results:1,
   total_pages:1
 };
-  constructor(private searchdataService: SearchdataService) { }
+  constructor(private searchdataService: SearchdataService,private router :Router) { }
   ngOnInit() {
    
   }

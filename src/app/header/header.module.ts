@@ -7,7 +7,7 @@ import { SearchdumbComponent } from './searchdumb/searchdumb.component';
 import { SearchsmartComponent } from './searchsmart/searchsmart.component';
 import {HttpClientModule} from '@angular/common/http'
 import {BrowserModule} from '@angular/platform-browser'
-
+// import {Router,Routes,RouterModule} from '@angular/router'
 @NgModule({
   imports: [
     CommonModule,
