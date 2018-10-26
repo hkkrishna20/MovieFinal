@@ -1,22 +1,35 @@
-import { HeaderModule } from './header/header.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {MatCardModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
+import { SearchDummyComponent } from './search-dummy/search-dummy.component';
+import { MovieViewComponent } from './movie-view/movie-view.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieService } from './movie.service';
+import { RouterModule } from '@angular/router';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    SearchDummyComponent,
+    MovieViewComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
-    HeaderModule,
-    BrowserAnimationsModule,
+    HttpClientModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

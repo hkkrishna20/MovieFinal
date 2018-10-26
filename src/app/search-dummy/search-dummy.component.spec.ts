@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeadercomponentComponent } from './headercomponent.component';
+import { SearchDummyComponent } from './search-dummy.component';
 
-describe('HeadercomponentComponent', () => {
-  let component: HeadercomponentComponent;
-  let fixture: ComponentFixture<HeadercomponentComponent>;
+describe('SearchDummyComponent', () => {
+  let component: SearchDummyComponent;
+  let fixture: ComponentFixture<SearchDummyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeadercomponentComponent ]
+      declarations: [ SearchDummyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeadercomponentComponent);
+    fixture = TestBed.createComponent(SearchDummyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
